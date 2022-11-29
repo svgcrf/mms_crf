@@ -1,0 +1,8 @@
+fieldset:disabled {
+    display: none;
+}
+
+input:disabled {
+    border: darkgray thin solid;
+    background-color: lightgray;
+}

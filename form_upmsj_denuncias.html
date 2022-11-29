@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST FORM</title>
+    <script defer src="form_upmsj_denuncias.js"></script>
+    <link rel="stylesheet" type="text/css" href="form_upmsj_denuncias.css"/>
+
+</head>
+<body>
+
+
+    <p> FORMULARIO DE DENUNCIAS, QUEJAS Y RECLAMOS  - SERVICIOS UPMSJ </p>
+
+    <!-- VALIDACIÓN DE DATOS  (f es form)-->
+    <form name="f_denuncias" action="#" method="POST">
+
+        <!-- CONDICIÓN TIPO DE FORMULARIO (anonimo o no anonimo)-->
+        <div class="f-type-item">   
+        <Label for="f_typea"> Desea registrar su datos personales en la denuncia: </label>
+            <select name="f_typea" id="f_typea" autocomplete="off"/>
+                <option value=""> - Seleccione una opción - </option>
+                <option name="f_type" value="0"> Sí (Registrar) </option>
+                <option name="f_type" value="1" checked> No (Formulario Anonimo) </option>
+            </select>
+        </div>
+        <br>
+        <br>
+
+        <!-- campos emergentes por condición -->
+        <fieldset name="f_dpers" disable>
+
+            <div class="f-dpers-item">
+                <Label for="dpers1"> Nombres y apellidos: </label>
+                <input type="text" name="dpers1" id="dpers1"/>
+            </div>
+            <div class="f-dpers-item">
+                <Label for="dpers2"> Numero de telefono: </label>
+                <input type="text" name="dpers2" id="dpers2"/>
+            </div>
+            <div class="f-dpers-item">
+                <Label for="dpers3"> Correo electronico: </label>
+                <input type="text" name="dpers3" id="dpers3"/>
+            </div>
+            <div class="f-dpers-item">
+                <Label for="dpers4"> Ingrese sus datos personales: </label>
+                <input type="text" name="dpers4" id="dpers4"/>
+            </div>
+            <div class="f-dpers-item">
+                <Label for="dpers5"> Ingrese su edad: </label>
+                <input type="text" name="dpers5" id="dpers5"/>
+            </div>
+            <div class="f-dpers-item">
+                <Label for="dpers6"> Ingrese su sexo: </label>
+                <select name="dpers6" id="dpers6" required autocomplete="off"/>
+                    <option value=""> - Seleccione una opción - </option>
+                    <option value="dpers6_h"> Hombre </option>
+                    <option value="dpers6_m"> Mujer </option>
+                    <option value="dpers6_otro"> Otro </option>
+                </select>
+            </div>
+
+
+        </fieldset>
+        <!-- CONDICIÓN TIPO DE INGRESO (DENUNCIA, SUGERENCIA O QUEJA)-->
+        <Label for="f_intype"> Que desea ingresar en nuestro buzon en linea: </label>
+        <select name="f_intype" id="f_intype" autocomplete="off"/>
+            <option value=""> - Seleccione una opción - </option>
+            <option value="f_intype_denun"> Denuncia </option>
+            <option value="f_type_suger"> Sugerencia </option>
+            <option value="f_type_quej"> Queja </option>
+        </select>
+
+
+
+
+
+    
+    
+    </form>
+    
+    <!-- END FORM -->
+
+
+    <form name="form01">
+        <div class="form-item">
+            <select name="f_typea" id="f_typea" autocomplete="off"/>
+                <label><option name="yesOrNo" value="0"/>Yes</option></label>
+                <label><option name="yesOrNo" value="1" checked/>No</option></label>
+            </select>
+        </div>
+        <fieldset name="yesQuestion" disabled>
+            <div class="form-item">
+                <label for="mailing_address" class="req-field">Mailing Address</label>
+                <input id="mailing_address" name="mailing_address" type="text" autocomplete="street-address" required/>
+            </div>
+            <div class="form-item">
+                <label for="mailing_city" class="req-field">City</label>
+                <input id="mailing_city" name="mailing_city" type="text" autocomplete="address-level2" required/>
+            </div>
+            <div class="form-item">
+                <label for="mailing_zip" class="req-field">Zip Code</label>
+                <input id="mailing_zip" name="mailing_zip" type="text"  autocomplete="postal-code" required/>
+            </div>
+        </fieldset>
+    </form>
+
+
+
+
+
+
+
+</body>
+</html>
